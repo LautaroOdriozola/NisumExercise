@@ -1,0 +1,111 @@
+{
+	"info": {
+		"_postman_id": "3ae88572-f248-4dc5-9086-717a59c15ae8",
+		"name": "Nisum Exercise",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Registro Usuario",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Juan Rodriguez\",\r\n    \"email\": \"juan@rodriguez.org\",\r\n    \"password\": \"juanrod1\",\r\n    \"phones\": [\r\n        {\r\n            \"number\": \"1234567\",\r\n            \"cityCode\": \"1\",\r\n            \"countryCode\": \"57\"\r\n        }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"juan@rodriguez.org\",\r\n    \"password\":\"juanrod1\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/user/login",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Desactivar Usuario",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "localhost:8002/user/desactivate/1",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"user",
+						"desactivate",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Cambio de password regex",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"regex\":\"^(?=.*[A-Za-z])(?=.*\\\\d)(?=.*[@$!%*#?&])[A-Za-z\\\\d@$!%*#?&]{8,}$\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8002/passwordRegex",
+					"host": [
+						"localhost"
+					],
+					"port": "8002",
+					"path": [
+						"passwordRegex"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
