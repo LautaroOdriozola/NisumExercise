@@ -55,7 +55,6 @@ Exercise carried out as a technical test for Nisum Latam.
 
 
 
-
 ## Installation
 
 Install the project with mvn and Java 8.
@@ -67,3 +66,10 @@ Install the project with mvn and Java 8.
 ```
 
 The port by default is 8002
+
+Swagger Link: http://localhost:8002/swagger-ui.html
+
+## Authors
+
+- [@LautaroOdriozola](https://www.github.com/LautaroOdriozola)
+
